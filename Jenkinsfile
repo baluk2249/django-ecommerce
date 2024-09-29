@@ -1,5 +1,5 @@
 pipeline{
-    agent docker
+    agent any
     environment {
         DOCKER_IMAGE ='baluk2249/django-ecommerce'
         BUILD_NUMBER ='v2'
@@ -8,7 +8,7 @@ pipeline{
 
         stage ('checout'){
             steps {
-                git 'https://github.com/baluk2249/django-ecommerce.git'
+                git url: 'https://github.com/baluk2249/django-ecommerce.git' ,branch: "main"
             }
         }
         stage('Build'){
