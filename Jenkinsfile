@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent docker
     environment {
         DOCKER_IMAGE ='baluk2249/django-ecommerce'
         BUILD_NUMBER ='v2'
